@@ -1,0 +1,36 @@
+.overlay {
+    position: absolute;
+    z-index: 2;
+    right: 8rem;
+    bottom: 3rem;
+    left: auto;
+    top: auto;
+    width: min(calc(100% - 7rem), 22rem);
+    padding: 1rem;
+    text-align: left;
+    transform: none;
+    pointer-events: auto;
+}
+
+.closeButton {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    width: 2.75rem;
+    height: 2.75rem;
+    padding: 0;
+    border: 0;
+    color: currentColor;
+    background: transparent;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.closeButton:hover {
+    transform: scale(1.1);
+}
+
+.closeButton:focus-visible {
+    outline: 2px solid currentColor;
+    outline-offset: 2px;
+}

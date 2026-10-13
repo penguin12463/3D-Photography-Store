@@ -1,0 +1,83 @@
+.wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.controls {
+    position: absolute;
+    z-index: 1;
+    inset: 0;
+    pointer-events: none;
+}
+
+.arrow {
+    position: absolute;
+    top: 50%;
+    display: grid;
+    width: 3rem;
+    height: 3rem;
+    padding: 0;
+    place-items: center;
+    border: 0;
+    color: #111827;
+    background: transparent;
+    transform: translateY(-50%);
+    pointer-events: auto;
+    cursor: pointer;
+}
+
+.chevron {
+    width: 1rem;
+    height: 1rem;
+    border-top: 2px solid currentColor;
+    border-right: 2px solid currentColor;
+    border-radius: 2px;
+    transition: scale 150ms ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .chevron {
+        transition: none;
+    }
+}
+
+.chevronLeft {
+    transform: rotate(-135deg);
+}
+
+.chevronRight {
+    transform: rotate(45deg);
+}
+
+.previousArrow {
+    left: 1rem;
+}
+
+.nextArrow {
+    right: 1rem;
+}
+
+.arrow:not(:disabled):hover .chevron {
+    scale: 1.2;
+}
+
+.arrow:disabled {
+    opacity: 0.25;
+    cursor: default;
+}
+
+.arrow:focus-visible {
+    border-radius: 0.25rem;
+    outline: 3px solid #087ea4;
+    outline-offset: 2px;
+}
+
+.status {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+}
